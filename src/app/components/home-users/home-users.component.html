@@ -1,0 +1,32 @@
+
+<section *ngIf="allusers.length>0" >
+
+<input type="text" placeholder="search....."  class="form-control w-50 mx-auto p-3 mb-5 shadow mt-3"  [(ngModel)]="searchid">
+<div class="container me-3">
+    <div class="row g-5 justify-content-center align-items-center">
+<div class="col-md-4 overflow-hidden  " *ngFor="let user of allusers|search:searchid" >
+<div class="card user shadow" style="width: 18rem;" [routerLink]="['/userdetails',user.id]">
+    <img [src]="user.avatar" class="card-img-top" >
+    <div class="card-body p-4">
+
+        <h5>{{user.id}}</h5>
+      <h5 class="card-title">{{user.first_name}}</h5>
+      <p class="card-text">{{user.last_name}}</p>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+<div class="d-flex align-items-center justify-content-center mt-4">
+<div>
+    
+    
+    <mat-paginator [length]="totalUsers"
+                   [pageSize]="pageSize"
+                   [pageSizeOptions]="pageSizeOptions"
+                   (page)="onPageChange($event)">
+    </mat-paginator>
+  </div></div>

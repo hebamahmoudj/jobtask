@@ -1,0 +1,25 @@
+<!-- userdetails -->
+
+
+<section class="mt-4" *ngIf="userdetails">
+    <div class="container ">
+<div class="row shadow py-5 " style="background-color: #f8f4f4;">
+
+
+<div class="col-md-3">
+<img [src]="userdetails.avatar" alt="" class="w-100">
+</div>
+<div class="col-md-9 d-flex align-items-center justify-content-center">
+    <div>
+        <p><span style="font-size:1rem;font-weight: bold;">Name:</span>{{userdetails.first_name}}    {{userdetails.last_name}}</p>
+        <p><span style="font-size:1rem;font-weight: bold;">Gmail:</span>{{userdetails.email}}</p>
+        <button mat-raised-button color="warn" class="w-100 m-auto mt-4" (click)="backtohome()">Back to home</button>
+    </div>
+
+    </div>
+   
+
+
+</div>
+</div>
+</section>

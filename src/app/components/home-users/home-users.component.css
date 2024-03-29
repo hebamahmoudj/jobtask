@@ -1,0 +1,10 @@
+.user{
+    overflow: hidden;
+    background-color: #f8f4f4
+}
+img{
+    transition: transform 1s ;
+}
+img:hover{
+    transform: scale(1.1);
+}
