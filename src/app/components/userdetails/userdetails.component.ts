@@ -30,7 +30,7 @@ export class UserdetailsComponent implements OnInit,OnDestroy {
     
   }
   backtohome(){
-    this._Router.navigate(['/home'])
+    this._Router.navigate(['home'])
 
 
   }
